@@ -14,7 +14,6 @@ class AdMobManager: NSObject, ObservableObject, GADFullScreenContentDelegate {
     
     func loadInterstitial() {
         let request = GADRequest()
-        // テスト用広告ID。本番環境では実際の広告IDに置き換えてください。
         GADInterstitialAd.load(
             withAdUnitID: "ca-app-pub-3940256099942544/4411468910",
             request: request
