@@ -1,81 +1,146 @@
-import SwiftUI
+import UIKit
 import WebKit
-import Combine
+import GoogleMobileAds
+import AppTrackingTransparency
 
-struct WebView: UIViewRepresentable {
-    let url: URL
-    @Binding var isLoading: Bool
-    @Binding var error: Error?
-    @ObservedObject var adManager = AdMobManager.shared
+class ViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler, GADFullScreenContentDelegate {
     
-    class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
-        var parent: WebView
-        var webView: WKWebView?
+    private var webView: WKWebView!
+    private var bannerView: GADBannerView!
+    private var interstitialAd: GADInterstitialAd?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupWebView()
+        setupBannerAd()
+        loadInterstitialAd()
         
-        init(_ parent: WebView) {
-            self.parent = parent
-            super.init()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.requestIDFA()
         }
-        
-        func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-            parent.isLoading = true
-            parent.error = nil
-        }
-        
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            parent.isLoading = false
-            
-            // JavaScriptを注入してボタンクリックを監視
-            let script = """
-                document.addEventListener('click', function(e) {
-                    if (e.target.matches('button')) {
-                        const buttonText = e.target.textContent.trim();
-                        if (buttonText === 'ホームに戻る' || buttonText === 'もう一度プレイ') {
-                            window.webkit.messageHandlers.buttonClicked.postMessage(buttonText);
-                        }
-                    }
-                });
-            """
-            webView.evaluateJavaScript(script, completionHandler: nil)
-        }
-        
-        func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-            parent.isLoading = false
-            parent.error = error
-        }
-        
-        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-            if message.name == "buttonClicked" {
-                if parent.adManager.isAdLoaded {
-                    parent.adManager.showAd()
+    }
+    
+    private func requestIDFA() {
+        ATTrackingManager.requestTrackingAuthorization { status in
+            DispatchQueue.main.async {
+                switch status {
+                case .authorized:
+                    print("Tracking authorization authorized")
+                    self.bannerView.load(GADRequest())
+                case .denied:
+                    print("Tracking authorization denied")
+                case .notDetermined:
+                    print("Tracking authorization not determined")
+                case .restricted:
+                    print("Tracking authorization restricted")
+                @unknown default:
+                    print("Tracking authorization unknown")
                 }
             }
         }
     }
     
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-    
-    func makeUIView(context: Context) -> WKWebView {
+    private func setupWebView() {
         let configuration = WKWebViewConfiguration()
-        configuration.allowsInlineMediaPlayback = true
-        configuration.mediaTypesRequiringUserActionForPlayback = []
+        let userContentController = WKUserContentController()
+        userContentController.add(self, name: "homeButton")
+        userContentController.add(self, name: "replayButton")
+        configuration.userContentController = userContentController
         
-        // JavaScript messageHandlerの設定
-        let contentController = WKUserContentController()
-        contentController.add(context.coordinator, name: "buttonClicked")
-        configuration.userContentController = contentController
+        webView = WKWebView(frame: .zero, configuration: configuration)
+        webView.navigationDelegate = self
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(webView)
         
-        let webView = WKWebView(frame: .zero, configuration: configuration)
-        webView.navigationDelegate = context.coordinator
-        context.coordinator.webView = webView
+        NSLayoutConstraint.activate([
+            webView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50)
+        ])
         
-        return webView
+        if let url = URL(string: "https://guileless-squirrel-dcef9e.netlify.app") {
+            let request = URLRequest(url: url)
+            webView.load(request)
+        }
     }
     
-    func updateUIView(_ webView: WKWebView, context: Context) {
-        let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
-        webView.load(request)
+    private func setupBannerAd() {
+        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        
+        NSLayoutConstraint.activate([
+            bannerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bannerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bannerView.widthAnchor.constraint(equalToConstant: 320),
+            bannerView.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        bannerView.adUnitID = "ca-app-pub-1982702464173576/7465302958"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+    }
+    
+    private func loadInterstitialAd() {
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-1982702464173576/4835270189",
+                              request: request) { [weak self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            self?.interstitialAd = ad
+            self?.interstitialAd?.fullScreenContentDelegate = self
+        }
+    }
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        switch message.name {
+        case "homeButton", "replayButton":
+            showInterstitialAd()
+        default:
+            break
+        }
+    }
+    
+    private func showInterstitialAd() {
+        if let ad = interstitialAd {
+            ad.present(fromRootViewController: self)
+        } else {
+            print("Interstitial ad wasn't ready")
+            loadInterstitialAd()
+        }
+    }
+}
+
+// MARK: - WKNavigationDelegate
+extension ViewController {
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        // ローディングインジケータの表示など
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        // ローディングインジケータの非表示など
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        let alert = UIAlertController(title: "エラー",
+                                    message: "ページを読み込めませんでした",
+                                    preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+}
+
+// MARK: - GADFullScreenContentDelegate
+extension ViewController {
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content")
+        loadInterstitialAd()
+    }
+    
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad failed to present full screen content with error: \(error.localizedDescription)")
     }
 }
