@@ -1,0 +1,8 @@
+platform :ios, '14.0'
+
+target 'ElectricChairGame' do
+  use_frameworks!
+  
+  # Google AdMob
+  pod 'Google-Mobile-Ads-SDK'
+end

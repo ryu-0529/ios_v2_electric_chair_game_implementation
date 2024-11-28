@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" 
+           rows="auto" 
+           columns="*,*" 
+           class="score-board">
+    <StackLayout col="0">
+        <Label text="プレイヤー1" class="player-label" />
+        <Label text="{{ player1Score }}" class="player-score" />
+        <Label text="{{ 'ショック: ' + player1Shocks + '/3' }}" class="shock-count" />
+    </StackLayout>
+    <StackLayout col="1">
+        <Label text="プレイヤー2" class="player-label" />
+        <Label text="{{ player2Score }}" class="player-score" />
+        <Label text="{{ 'ショック: ' + player2Shocks + '/3' }}" class="shock-count" />
+    </StackLayout>
+</GridLayout>

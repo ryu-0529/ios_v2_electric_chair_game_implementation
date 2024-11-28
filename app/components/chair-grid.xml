@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns="http://schemas.nativescript.org/tns.xsd" 
+           rows="auto,auto,auto,auto" 
+           columns="*,*,*">
+    <Repeater items="{{ chairs }}">
+        <Repeater.itemTemplate>
+            <Button text="{{ number }}"
+                   tap="{{ $parents['Page'].onChairTap }}"
+                   row="{{ Math.floor($index / 3) }}"
+                   col="{{ $index % 3 }}"
+                   class="{{ isAvailable ? 'chair-button chair-button-available' : 'chair-button chair-button-unavailable' }}"
+                   isEnabled="{{ isAvailable }}"
+                   index="{{ $index }}" />
+        </Repeater.itemTemplate>
+    </Repeater>
+</GridLayout>
