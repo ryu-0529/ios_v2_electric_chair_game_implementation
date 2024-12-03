@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07165F152CF67BDD00B14063 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 07165F142CF67BDD00B14063 /* GoogleMobileAds */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07165EF42CF6784F00B14063 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07165ED52CF6784D00B14063 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07165EDC2CF6784D00B14063;
+			remoteInfo = electric_chair_game_implementation;
+		};
+		07165EFE2CF6784F00B14063 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07165ED52CF6784D00B14063 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07165EDC2CF6784D00B14063;
+			remoteInfo = electric_chair_game_implementation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07165EDD2CF6784D00B14063 /* electric_chair_game_implementation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = electric_chair_game_implementation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07165EF32CF6784F00B14063 /* electric_chair_game_implementationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = electric_chair_game_implementationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07165EFD2CF6784F00B14063 /* electric_chair_game_implementationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = electric_chair_game_implementationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		07165F052CF6784F00B14063 /* Exceptions for "electric_chair_game_implementation" folder in "electric_chair_game_implementation" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 07165EDC2CF6784D00B14063 /* electric_chair_game_implementation */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		07165EDF2CF6784D00B14063 /* electric_chair_game_implementation */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				07165F052CF6784F00B14063 /* Exceptions for "electric_chair_game_implementation" folder in "electric_chair_game_implementation" target */,
+			);
+			path = electric_chair_game_implementation;
+			sourceTree = "<group>";
+		};
+		07165EF62CF6784F00B14063 /* electric_chair_game_implementationTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = electric_chair_game_implementationTests;
+			sourceTree = "<group>";
+		};
+		07165F002CF6784F00B14063 /* electric_chair_game_implementationUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = electric_chair_game_implementationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07165EDA2CF6784D00B14063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07165F152CF67BDD00B14063 /* GoogleMobileAds in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07165EF02CF6784F00B14063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07165EFA2CF6784F00B14063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07165ED42CF6784D00B14063 = {
+			isa = PBXGroup;
+			children = (
+				07165EDF2CF6784D00B14063 /* electric_chair_game_implementation */,
+				07165EF62CF6784F00B14063 /* electric_chair_game_implementationTests */,
+				07165F002CF6784F00B14063 /* electric_chair_game_implementationUITests */,
+				07165EDE2CF6784D00B14063 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07165EDE2CF6784D00B14063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07165EDD2CF6784D00B14063 /* electric_chair_game_implementation.app */,
+				07165EF32CF6784F00B14063 /* electric_chair_game_implementationTests.xctest */,
+				07165EFD2CF6784F00B14063 /* electric_chair_game_implementationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07165EDC2CF6784D00B14063 /* electric_chair_game_implementation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07165F062CF6784F00B14063 /* Build configuration list for PBXNativeTarget "electric_chair_game_implementation" */;
+			buildPhases = (
+				07165ED92CF6784D00B14063 /* Sources */,
+				07165EDA2CF6784D00B14063 /* Frameworks */,
+				07165EDB2CF6784D00B14063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				07165EDF2CF6784D00B14063 /* electric_chair_game_implementation */,
+			);
+			name = electric_chair_game_implementation;
+			packageProductDependencies = (
+				07165F142CF67BDD00B14063 /* GoogleMobileAds */,
+			);
+			productName = electric_chair_game_implementation;
+			productReference = 07165EDD2CF6784D00B14063 /* electric_chair_game_implementation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07165EF22CF6784F00B14063 /* electric_chair_game_implementationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07165F0B2CF6784F00B14063 /* Build configuration list for PBXNativeTarget "electric_chair_game_implementationTests" */;
+			buildPhases = (
+				07165EEF2CF6784F00B14063 /* Sources */,
+				07165EF02CF6784F00B14063 /* Frameworks */,
+				07165EF12CF6784F00B14063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07165EF52CF6784F00B14063 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				07165EF62CF6784F00B14063 /* electric_chair_game_implementationTests */,
+			);
+			name = electric_chair_game_implementationTests;
+			packageProductDependencies = (
+			);
+			productName = electric_chair_game_implementationTests;
+			productReference = 07165EF32CF6784F00B14063 /* electric_chair_game_implementationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07165EFC2CF6784F00B14063 /* electric_chair_game_implementationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07165F0E2CF6784F00B14063 /* Build configuration list for PBXNativeTarget "electric_chair_game_implementationUITests" */;
+			buildPhases = (
+				07165EF92CF6784F00B14063 /* Sources */,
+				07165EFA2CF6784F00B14063 /* Frameworks */,
+				07165EFB2CF6784F00B14063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07165EFF2CF6784F00B14063 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				07165F002CF6784F00B14063 /* electric_chair_game_implementationUITests */,
+			);
+			name = electric_chair_game_implementationUITests;
+			packageProductDependencies = (
+			);
+			productName = electric_chair_game_implementationUITests;
+			productReference = 07165EFD2CF6784F00B14063 /* electric_chair_game_implementationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07165ED52CF6784D00B14063 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					07165EDC2CF6784D00B14063 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					07165EF22CF6784F00B14063 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 07165EDC2CF6784D00B14063;
+					};
+					07165EFC2CF6784F00B14063 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 07165EDC2CF6784D00B14063;
+					};
+				};
+			};
+			buildConfigurationList = 07165ED82CF6784D00B14063 /* Build configuration list for PBXProject "electric_chair_game_implementation" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07165ED42CF6784D00B14063;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				07165F132CF67BDD00B14063 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 07165EDE2CF6784D00B14063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07165EDC2CF6784D00B14063 /* electric_chair_game_implementation */,
+				07165EF22CF6784F00B14063 /* electric_chair_game_implementationTests */,
+				07165EFC2CF6784F00B14063 /* electric_chair_game_implementationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07165EDB2CF6784D00B14063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07165EF12CF6784F00B14063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07165EFB2CF6784F00B14063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07165ED92CF6784D00B14063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07165EEF2CF6784F00B14063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07165EF92CF6784F00B14063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07165EF52CF6784F00B14063 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07165EDC2CF6784D00B14063 /* electric_chair_game_implementation */;
+			targetProxy = 07165EF42CF6784F00B14063 /* PBXContainerItemProxy */;
+		};
+		07165EFF2CF6784F00B14063 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07165EDC2CF6784D00B14063 /* electric_chair_game_implementation */;
+			targetProxy = 07165EFE2CF6784F00B14063 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07165F072CF6784F00B14063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K9W7CN22YP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = electric_chair_game_implementation/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.f-ryu.electric-chair-game-implementation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07165F082CF6784F00B14063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K9W7CN22YP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = electric_chair_game_implementation/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.f-ryu.electric-chair-game-implementation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		07165F092CF6784F00B14063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07165F0A2CF6784F00B14063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07165F0C2CF6784F00B14063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K9W7CN22YP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.f-ryu.electric-chair-game-implementationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/electric_chair_game_implementation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/electric_chair_game_implementation";
+			};
+			name = Debug;
+		};
+		07165F0D2CF6784F00B14063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K9W7CN22YP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.f-ryu.electric-chair-game-implementationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/electric_chair_game_implementation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/electric_chair_game_implementation";
+			};
+			name = Release;
+		};
+		07165F0F2CF6784F00B14063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K9W7CN22YP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.f-ryu.electric-chair-game-implementationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = electric_chair_game_implementation;
+			};
+			name = Debug;
+		};
+		07165F102CF6784F00B14063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K9W7CN22YP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.f-ryu.electric-chair-game-implementationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = electric_chair_game_implementation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07165ED82CF6784D00B14063 /* Build configuration list for PBXProject "electric_chair_game_implementation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07165F092CF6784F00B14063 /* Debug */,
+				07165F0A2CF6784F00B14063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07165F062CF6784F00B14063 /* Build configuration list for PBXNativeTarget "electric_chair_game_implementation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07165F072CF6784F00B14063 /* Debug */,
+				07165F082CF6784F00B14063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07165F0B2CF6784F00B14063 /* Build configuration list for PBXNativeTarget "electric_chair_game_implementationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07165F0C2CF6784F00B14063 /* Debug */,
+				07165F0D2CF6784F00B14063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07165F0E2CF6784F00B14063 /* Build configuration list for PBXNativeTarget "electric_chair_game_implementationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07165F0F2CF6784F00B14063 /* Debug */,
+				07165F102CF6784F00B14063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07165F132CF67BDD00B14063 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07165F142CF67BDD00B14063 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07165F132CF67BDD00B14063 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 07165ED52CF6784D00B14063 /* Project object */;
+}
